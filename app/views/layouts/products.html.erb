@@ -6,12 +6,19 @@
 	<meta name="author" content="ms" />
 	<meta name="description" content="Description" />
 	<meta name="keywords" content="key, words" />
-  <%= stylesheet_link_tag "screen", :media=> "all" %>
-  <%= javascript_include_tag 'js-global/FancyZoom.js', 'js-global/FancyZoomHTML.js', :cache => true %>
+  <%= stylesheet_link_tag "screen", 'blitzer/jquery-ui-1.8.4.custom', :media=> "all" %>
+  <%= javascript_include_tag 'jquery-1.4.2.min', 'jquery-ui-1.8.4.custom.min', 'js-global/FancyZoom.js', 'js-global/FancyZoomHTML.js', :cache => true %>
 	<title>dalli.if.ua - офіційний імпортер продукції Dalli в Україні</title>
+  <script type="text/javascript">
+  	$(function() {
+  	  setupZoom();
+  		$("#tabs").tabs({
+  			event: 'mouseover'
+  		});
+  	});
+  	</script>
 </head>
-
-<body onload="setupZoom()">
+<body>
 	<p style="color: green"><%= flash[:notice] %></p>
 	<div id="content">
 		<p id="top">ТОВ "Зета ІФ" - офіційний імпортер продукції DALLI в Україні  (095-341-96-23) </p>
@@ -19,7 +26,6 @@
 			<h1><%= link_to "dalli.if.ua", page_path("home") %></h1>
 		</div>
 		<ul id="menu">
-
 			<li class="<%= controller.controller_name=="pages" && page_path=="/pages/home" ? 'current' : '' %>" ><%= link_to "Головна", page_path("home") %></li>
 			
 			<% if controller.controller_name=="products"%>	<li class="current"> <%= link_to 'Продукція', products_path %></li>
@@ -35,17 +41,11 @@
 			
 			<% if controller.controller_name=="pages" && page_path=="/pages/contacts"%> <li class="current"><%= link_to "Контакти", page_path("contacts") %></li>
 			<%else%> <li><%= link_to "Контакти", page_path("contacts") %></li> <%end%>
-			
-			
 		</ul>
-		
-		
-<%= yield %>
-		
-		
+    <%= yield %>
 		<div id="footer">
 			<p>&copy; Copyright 2010 dalli.if.ua</p>
-			</div>	
+		</div>	
 	</div>
 </body>
 </html>

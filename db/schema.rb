@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20100814073254) do
 
   create_table "products", :force => true do |t|
     t.string   "title"
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(:version => 20100814073254) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.decimal  "price",              :precision => 8, :scale => 2, :default => 0.0
-    t.string   "shortd"
+    t.text     "shortd"
   end
 
   create_table "users", :force => true do |t|

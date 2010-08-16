@@ -61,3 +61,7 @@ temp/public/system/*
 config/billing.yml
 config/deploy.rb
 config/database.yml
+public/images/assets/
+public/images/assets/*
+log/*
+log
