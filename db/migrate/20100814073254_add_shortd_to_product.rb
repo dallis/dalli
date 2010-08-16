@@ -1,6 +1,6 @@
 class AddShortdToProduct < ActiveRecord::Migration
   def self.up
-    add_column :products, :shortd, :string
+    add_column :products, :shortd, :text
   end
 
   def self.down
