@@ -60,3 +60,4 @@ temp/public/system/
 temp/public/system/*
 config/billing.yml
 config/deploy.rb
+config/database.yml
