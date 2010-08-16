@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="uk" lang="uk">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="Robots" content="index,follow" />
+	<meta name="author" content="ms" />
+	<meta name="description" content="Description" />
+	<meta name="keywords" content="key, words" />
+<%= stylesheet_link_tag "screen", :media=> "all" %>
+<%= javascript_include_tag 'js-global/FancyZoom.js' %>
+<%= javascript_include_tag 'js-global/FancyZoomHTML.js' %>
+
+
+	<title>dalli.if.ua - офіційний імпортер продукції Dalli в Україні</title>
+</head>
+<body onload="setupZoom()">
+	<p style="color: green"><%= flash[:notice] %></p>
+	<div id="content">
+		<p id="top">ТОВ "Зета ІФ" - офіційний імпортер продукції DALLI в Україні  (095-341-96-23) </p>
+		<div id="logo">
+			<h1><%= link_to "dalli.if.ua", page_path("home") %></h1>
+		</div>
+		<ul id="menu">
+			
+			<% if controller.controller_name=="pages" && page_path=="/pages/home"%> <li class="current"><%= link_to "Головна", page_path("home") %></li>
+			<%else%> <li><%= link_to "Головна", page_path("home") %> <%end%>
+			
+			<% if controller.controller_name=="products"%>	<li class="current"> <%= link_to 'Продукція', products_path %></li>
+			<%else%> <li> <%= link_to 'Продукція', products_path %> <%end%>
+			
+			
+			<% if controller.controller_name=="pages" && page_path=="/pages/cert"%> <li class="current"><%= link_to "Сертифікати", page_path("cert") %></li>
+			<%else%> <li><%= link_to "Сертифікати", page_path("cert") %></li> <%end%>
+			
+			
+			<% if controller.controller_name=="pages" && page_path=="/pages/about"%> <li class="current"><%= link_to "Про нас", page_path("about") %></li>
+			<%else%> <li><%= link_to "Про нас", page_path("about") %></li> <%end%>
+			
+			<% if controller.controller_name=="pages" && page_path=="/pages/contacts"%> <li class="current"><%= link_to "Контакти", page_path("contacts") %></li>
+			<%else%> <li><%= link_to "Контакти", page_path("contacts") %></li> <%end%>
+			
+			
+		</ul>
+		
+		
+<%= yield %>
+		
+		
+		<div id="footer">
+			<p>&copy; Copyright 2010 dalli.if.ua</p>
+			</div>	
+	</div>
+</body>
+</html>

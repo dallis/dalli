@@ -1,0 +1,46 @@
+
+<div class="line"></div>
+
+<% if logged_in?  %>    
+<%= link_to 'Додати новий продукт', new_product_path %> | 
+<%end %>
+<% if logged_in?  %>
+<%= link_to 'Вийти', logout_path %>   <%end %>  
+<p>
+
+<h1>Продукція</h1>
+<p>
+
+<% @products.each do |product| %>
+
+<h3><strong><%=h product.title %></strong></h3>
+<p>
+
+
+
+<div class="forth">
+<%=link_to image_tag (product.photo.url(:small)), product.photo.url %>
+    </div>
+
+<div class="forth2">
+    <%=h product.shortd %>
+    	<br />
+    	<%= link_to 'Показати детальніше', product %>
+  
+  <% if logged_in?  %>
+     | <%= link_to 'Редагувати', edit_product_path(product) %> | 
+  <%end %>
+  
+  <% if logged_in?  %>    
+       <%= link_to 'Видалити', product, :confirm => 'Ви впевнені, що хочете видалити цей продукт?', :method => :delete %>
+  <%end %>
+  
+  </div>
+  
+<div class="forth3">  
+    <h1><%=h product.price %></h1>
+</div>    
+
+<div class="line"></div>
+<% end %>
+

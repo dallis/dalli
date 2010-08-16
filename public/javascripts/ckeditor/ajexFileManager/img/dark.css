@@ -1,0 +1,513 @@
+
+#fileThumb .thumb img {
+	min-width: 100px;
+	min-height:130px;
+}
+.ie7 #fileThumb .thumb {
+	width: 160px;
+	overflow: hidden;
+}
+#fileThumb .name {
+	width: 150px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	/*font: normal 11px Verdana;*/
+	font-size: 11px;
+	font-family: Verdana, Tahoma, Aria;
+}
+
+html, body {
+	color: #f5fff6;
+	background: #1d1d1d;
+	/*width: 1000px;
+	height: 560px;*/
+
+	width: 100%;
+	height:100%;
+}
+html, body {
+	padding-bottom: 20px !important;
+}
+
+
+label {
+	cursor: pointer;
+}
+
+#dirs {
+	float: left;
+	/*width: 220px;
+	height: 520px;*/
+	width: 20%;
+	height: 100%;
+	overflow: hidden;
+	border-right: 3px solid #404040;
+}
+
+
+
+#files {
+	float: left;
+	display: inline-block;
+	/*width: 755px;
+	height: 500px;*/
+	width: 79%;
+	height: 98%;
+	overflow: auto;
+	/*overflow-x: hidden;*/
+}
+.ie7 #files {display: block;}
+
+#fileList, #fileThumb {
+	float: left;
+	padding: 5px 5px 5px 6px;
+	
+}
+
+#fileThumb .thumb {
+	cursor: pointer;
+	float: left;
+	margin: 0px 2px 4px 0px;
+	padding: 5px 10px;
+
+	background-color: #5a5a5a;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('ext/default.png');
+}
+#fileThumb div {
+	font: normal 11px Tahoma;
+	text-align: center;
+}
+
+
+#fileThumb .name {
+	white-space: nowrap;
+	text-align: center;
+	overflow: hidden;
+	margin-top: -2px;
+}
+#fileThumb .date, #fileThumb .size {
+	display: none;
+}
+#fileThumb .check {
+	float: right;
+
+	margin-right: -4px;
+	margin-top: -12px;
+	position: relative;
+}
+
+#fileList table, #fileList table td {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+#fileList table thead td {
+	color: #fff;
+	font-weight: bold;
+	background: #38768d;
+}
+#fileList table td {
+	padding: 2px 10px;
+	border: 1px solid #373737;
+}
+#fileList .name a, #fileList .name a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+#fileList .name a:hover {
+	text-decoration: underline;
+}
+
+#dirsList {
+	padding: 10px;
+}
+
+#menu, .dirsMenu {
+	float: none;
+	clear: both;
+	width: 100%;
+	height: 20px;
+	background: #2e2e2e;
+}
+
+
+.dirsMenu a, .dirsMenu a:visited {
+	color: #6dcff6;
+	font: normal 11px Verdana;
+	text-decoration: none;
+	float: left;
+	display: block;
+	padding: 3px 15px 3px 15px;
+}
+.dirsMenu a:hover {
+	color: #fff;
+	background: #505050;
+}
+
+
+#menu .view, #menu .display, #menu .sort {
+	float: left;
+	margin: 0 5px;
+	padding: 2px 5px 2px 5px;
+	background: #505050;
+}
+
+#menu input {
+	position: relative;
+	bottom: -2px;
+}
+
+.opera #menu input {bottom: 1px;}
+.ie7 #menu .view, .ie7 #menu .display, .ie7 #menu .sort {margin-top: -4px;}
+
+
+#status {
+	float: none;
+	clear: both;
+	width: 100%;
+	height: 20px;
+	border-top: solid 1px #3c3c3c;
+	background: #2e2e2e;
+	position: fixed;
+	bottom: 0;
+}
+
+#status div.l {	float: left;}
+#status div.r {	float: right;}
+
+#status div div {
+	margin: 1px 5px;
+	padding: 2px 5px 2px 5px;
+	background: #418294;
+}
+#status a, #status a:visited {
+	color: #000;
+	text-decoration: none;
+}
+#status a:hover {
+	color: #fff;
+}
+
+#fileList {
+	display: none;
+}
+
+
+#uploadList {
+	position: fixed;
+	bottom: 50px;
+	width: 20%;
+	min-height: 60px;
+	padding-bottom: 20px;
+}
+
+#uploadList .selectLang {
+	width: 120px;
+	height: 20px;
+	padding: 0 15px;
+}
+
+.selectFile {
+	text-align: right;
+	width: 140px;
+	height:20px;
+	overflow: hidden;
+	margin-top: -23px;
+	background: #408d3b;
+}
+.selectFile div {
+	float: right;
+	text-align: right;
+	width: 80px;
+	max-width: 80px;
+}
+.selectFile div input {
+	height: 20px;
+	float: right;
+	font-size: 50px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	display: block;
+}
+
+
+.opera .selectFile, .ie7 .selectFile {background: #408d3b url('choose-file.gif') center no-repeat;}
+.opera #uploadList .selectLang span {display: none;}
+.opera .selectFile {margin-top: 0;}
+
+.ie .selectFile div input {position:absolute;right:0;}
+
+
+#uploaded {
+	z-index: 100;
+	font-size: 55px;
+	float: right;
+	cursor: pointer;
+}
+#uploadList a img {border: 0;margin-bottom: -4px;}
+
+#uploadList .MultiFile-label {
+	padding: 1px 0 1px 15px;
+}
+
+.resizeGraph {
+	display: block;
+	float: none;
+	clear: both;
+	padding-left: 5px;
+}
+.resizeGraph {
+	position: fixed;
+	bottom: 30px;
+	width: 20%;
+	height:  35px;
+}
+.resizeGraph span[lang="width"], .resizeGraph span[lang="height"] {
+	display: inline-block;
+	width: 60px;
+}
+
+#resizeWidth, #resizeHeight {
+	color: #ddd;
+	width: 40px;
+	border: 1px solid #272727;
+	background: #393939;
+}
+
+#status .successUpload {
+	background: #63b64e;
+	color: #fff;
+	font-weight: bold;
+}
+#status .warning {
+	color: #333;
+	font-weight: bold;
+	background: #f8b000;
+}
+
+
+
+
+a.deleteChecked, a.deleteChecked:visited {
+	float: left;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 4px 10px;
+	background: #4186a5;
+}
+a.deleteChecked:hover {
+	color: #000;
+}
+
+#dialog .c, #author .c {
+	padding: 5px 15px;
+	background: #808080;
+}
+#dialog .c div {
+	padding: 8px 0;
+}
+#dialog .t {width: 100%;padding: 2px 0;}
+
+#dialog input {
+	color: #333;
+	padding: 2px 5px;
+	border: 1px solid #666;
+	background: #fff;
+}
+
+#author {
+	width: 260px;
+	display: none;
+	position: absolute;
+	left:0;
+	top:0;
+	padding: 15px;
+	background: #464646;
+}
+
+#author {
+	width: 350px;
+	background: #2e2e2e;
+	
+}
+#author div {
+	padding: 15px;
+	background: #464646;
+}
+#author li {
+	padding: 2px 5px;
+	margin-left: 15px;
+}
+#author a, #author a:visited {
+	color: #6dcff6;
+	font: normal 11px Verdana;
+	text-decoration: none;
+}
+#author a:hover {
+	color: #f8b000;
+	text-decoration: underline;
+}
+
+#dirs, #uploadList, .resizeGraph {
+		/*min-width: 230px;*/
+}
+
+/* --- */
+
+
+div.ui-dynatree-container {
+	border: 0;
+	background: #1d1d1d;
+}
+
+div.ui-dynatree-container a, div.ui-dynatree-container a:visited {
+	color: #f5fff6;
+	font: normal 12px Verdana;
+}
+div.ui-dynatree-container a:hover {
+	color: #6dcff6;
+	text-decoration: underline;
+}
+
+.ui-dynatree-ico-cf span.ui-dynatree-icon {
+	background-image: url('../lib/dynatree/skin/ltFld_o.gif');
+}
+
+span.ui-dynatree-active a {
+	background-color: #68a8c1 !important;
+}
+
+a.ui-dynatree-title i {
+	color: #666;
+}
+a.ui-dynatree-title:hover {
+	text-decoration: none !important;
+}
+
+/* --- */
+
+#fileThumb .ext_aac {background-image: url('ext/aac.png');}
+#fileThumb .ext_ac3 {background-image: url('ext/ac3.png');}
+#fileThumb .ext_ace {background-image: url('ext/ace.png');}
+#fileThumb .ext_ade {background-image: url('ext/ade.png');}
+#fileThumb .ext_adp {background-image: url('ext/adp.png');}
+#fileThumb .ext_ai {background-image: url('ext/ai.png');}
+#fileThumb .ext_aiff {background-image: url('ext/aiff.png');}
+#fileThumb .ext_aspx {background-image: url('ext/aspx.png');}
+#fileThumb .ext_au {background-image: url('ext/au.png');}
+#fileThumb .ext_avi {background-image: url('ext/avi.png');}
+#fileThumb .ext_bak {background-image: url('ext/bak.png');}
+#fileThumb .ext_bat {background-image: url('ext/bat.png');}
+#fileThumb .ext_bin {background-image: url('ext/bin.png');}
+#fileThumb .ext_blue-ray {background-image: url('ext/blue-ray.png');}
+#fileThumb .ext_bmp {background-image: url('ext/bmp.png');}
+#fileThumb .ext_bup {background-image: url('ext/bup.png');}
+#fileThumb .ext_cab {background-image: url('ext/cab.png');}
+#fileThumb .ext_cat {background-image: url('ext/cat.png');}
+#fileThumb .ext_chm {background-image: url('ext/chm.png');}
+#fileThumb .ext_cmd {background-image: url('ext/cmd.png');}
+#fileThumb .ext_css {background-image: url('ext/css.png');}
+#fileThumb .ext_csv {background-image: url('ext/csv.png');}
+#fileThumb .ext_cue {background-image: url('ext/cue.png');}
+#fileThumb .ext_dat {background-image: url('ext/dat.png');}
+#fileThumb .ext_default {background-image: url('ext/default.png');}
+#fileThumb .ext_der {background-image: url('ext/der.png');}
+#fileThumb .ext_dic {background-image: url('ext/dic.png');}
+#fileThumb .ext_divx {background-image: url('ext/divx.png');}
+#fileThumb .ext_diz {background-image: url('ext/diz.png');}
+#fileThumb .ext_dll {background-image: url('ext/dll.png');}
+#fileThumb .ext_doc {background-image: url('ext/doc.png');}
+#fileThumb .ext_docx {background-image: url('ext/docx.png');}
+#fileThumb .ext_dos {background-image: url('ext/dos.png');}
+#fileThumb .ext_download {background-image: url('ext/download.png');}
+#fileThumb .ext_dvd {background-image: url('ext/dvd.png');}
+#fileThumb .ext_dwg {background-image: url('ext/dwg.png');}
+#fileThumb .ext_dwt {background-image: url('ext/dwt.png');}
+#fileThumb .ext_emf {background-image: url('ext/emf.png');}
+#fileThumb .ext_exc {background-image: url('ext/exc.png');}
+#fileThumb .ext_fav {background-image: url('ext/fav.png');}
+#fileThumb .ext_fla {background-image: url('ext/fla.png');}
+#fileThumb .ext_font {background-image: url('ext/font.png');}
+#fileThumb .ext_gif {background-image: url('ext/gif.png');}
+#fileThumb .ext_hlp {background-image: url('ext/hlp.png');}
+#fileThumb .ext_html {background-image: url('ext/html.png');}
+#fileThumb .ext_ie7 {background-image: url('ext/ie7.png');}
+#fileThumb .ext_ifo {background-image: url('ext/ifo.png');}
+#fileThumb .ext_inf {background-image: url('ext/inf.png');}
+#fileThumb .ext_ini {background-image: url('ext/ini.png');}
+#fileThumb .ext_iso {background-image: url('ext/iso.png');}
+#fileThumb .ext_isp {background-image: url('ext/isp.png');}
+#fileThumb .ext_java {background-image: url('ext/java.png');}
+#fileThumb .ext_jfif {background-image: url('ext/jfif.png');}
+#fileThumb .ext_jpeg {background-image: url('ext/jpeg.png');}
+#fileThumb .ext_jpg {background-image: url('ext/jpg.png');}
+#fileThumb .ext_js {background-image: url('ext/js.png');}
+#fileThumb .ext_log {background-image: url('ext/log.png');}
+#fileThumb .ext_m4a {background-image: url('ext/m4a.png');}
+#fileThumb .ext_m4p {background-image: url('ext/m4p.png');}
+#fileThumb .ext_mmf {background-image: url('ext/mmf.png');}
+#fileThumb .ext_mmm {background-image: url('ext/mmm.png');}
+#fileThumb .ext_mov {background-image: url('ext/mov.png');}
+#fileThumb .ext_movie {background-image: url('ext/movie.png');}
+#fileThumb .ext_mp2 {background-image: url('ext/mp2.png');}
+#fileThumb .ext_mp2v {background-image: url('ext/mp2v.png');}
+#fileThumb .ext_mp3 {background-image: url('ext/mp3.png');}
+#fileThumb .ext_mp4 {background-image: url('ext/mp4.png');}
+#fileThumb .ext_mpe {background-image: url('ext/mpe.png');}
+#fileThumb .ext_mpeg {background-image: url('ext/mpeg.png');}
+#fileThumb .ext_mpg {background-image: url('ext/mpg.png');}
+#fileThumb .ext_mpv2 {background-image: url('ext/mpv2.png');}
+#fileThumb .ext_msi {background-image: url('ext/msi.png');}
+#fileThumb .ext_music {background-image: url('ext/music.png');}
+#fileThumb .ext_nfo {background-image: url('ext/nfo.png');}
+#fileThumb .ext_one {background-image: url('ext/one.png');}
+#fileThumb .ext_pdd {background-image: url('ext/pdd.png');}
+#fileThumb .ext_pdf {background-image: url('ext/pdf.png');}
+#fileThumb .ext_php {background-image: url('ext/php.png');}
+#fileThumb .ext_png {background-image: url('ext/png.png');}
+#fileThumb .ext_pps {background-image: url('ext/pps.png');}
+#fileThumb .ext_ppt {background-image: url('ext/ppt.png');}
+#fileThumb .ext_pptx {background-image: url('ext/pptx.png');}
+#fileThumb .ext_print {background-image: url('ext/print.png');}
+#fileThumb .ext_psd {background-image: url('ext/psd.png');}
+#fileThumb .ext_rar {background-image: url('ext/rar.png');}
+#fileThumb .ext_rb {background-image: url('ext/rb.png');}
+#fileThumb .ext_reg {background-image: url('ext/reg.png');}
+#fileThumb .ext_rtf {background-image: url('ext/rtf.png');}
+#fileThumb .ext_safari {background-image: url('ext/safari.png');}
+#fileThumb .ext_scp {background-image: url('ext/scp.png');}
+#fileThumb .ext_search {background-image: url('ext/search.png');}
+#fileThumb .ext_sql {background-image: url('ext/sql.png');}
+#fileThumb .ext_swf {background-image: url('ext/swf.png');}
+#fileThumb .ext_sys {background-image: url('ext/sys.png');}
+#fileThumb .ext_theme {background-image: url('ext/theme.png');}
+#fileThumb .ext_tif {background-image: url('ext/tif.png');}
+#fileThumb .ext_tiff {background-image: url('ext/tiff.png');}
+#fileThumb .ext_tmp {background-image: url('ext/tmp.png');}
+#fileThumb .ext_ttf {background-image: url('ext/ttf.png');}
+#fileThumb .ext_txt {background-image: url('ext/txt.png');}
+#fileThumb .ext_uis {background-image: url('ext/uis.png');}
+#fileThumb .ext_upload {background-image: url('ext/upload.png');}
+#fileThumb .ext_url {background-image: url('ext/url.png');}
+#fileThumb .ext_vcr {background-image: url('ext/vcr.png');}
+#fileThumb .ext_video {background-image: url('ext/video.png');}
+#fileThumb .ext_vob {background-image: url('ext/vob.png');}
+#fileThumb .ext_wba {background-image: url('ext/wba.png');}
+#fileThumb .ext_wma {background-image: url('ext/wma.png');}
+#fileThumb .ext_wmv {background-image: url('ext/wmv.png');}
+#fileThumb .ext_wpl {background-image: url('ext/wpl.png');}
+#fileThumb .ext_wri {background-image: url('ext/wri.png');}
+#fileThumb .ext_wtx {background-image: url('ext/wtx.png');}
+#fileThumb .ext_wzv {background-image: url('ext/wzv.png');}
+#fileThumb .ext_xls {background-image: url('ext/xls.png');}
+#fileThumb .ext_xlsx {background-image: url('ext/xlsx.png');}
+#fileThumb .ext_xml {background-image: url('ext/xml.png');}
+#fileThumb .ext_xsl {background-image: url('ext/xsl.png');}
+#fileThumb .ext_zap {background-image: url('ext/zap.png');}
+#fileThumb .ext_zip {background-image: url('ext/zip.png');}

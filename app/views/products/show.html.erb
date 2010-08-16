@@ -1,0 +1,31 @@
+<div class="line"></div>
+
+<% if logged_in?  %>
+<%= link_to 'Редагувати', edit_product_path(@product) %> |
+<%end %>
+<%= link_to 'Назад', products_path %>
+
+<p>
+ <h3> <%=h @product.title %> </h3>
+</p>
+
+<div class="forth">
+<%= link_to image_tag(@product.photo.url(:small)), @product.photo.url %>
+</div>
+
+<div class="forth2">
+    <%= @product.shortd %>
+</div>
+
+<div class="forth3">  
+    <h1><%=h @product.price %></h1>
+</div>  
+
+
+<div class="forthm">
+<p>
+  <%= @product.description %>
+</p>
+
+
+</div>
