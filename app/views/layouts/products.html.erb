@@ -6,13 +6,11 @@
 	<meta name="author" content="ms" />
 	<meta name="description" content="Description" />
 	<meta name="keywords" content="key, words" />
-<%= stylesheet_link_tag "screen", :media=> "all" %>
-<%= javascript_include_tag 'js-global/FancyZoom.js' %>
-<%= javascript_include_tag 'js-global/FancyZoomHTML.js' %>
-
-
+  <%= stylesheet_link_tag "screen", :media=> "all" %>
+  <%= javascript_include_tag 'js-global/FancyZoom.js', 'js-global/FancyZoomHTML.js', :cache => true %>
 	<title>dalli.if.ua - офіційний імпортер продукції Dalli в Україні</title>
 </head>
+
 <body onload="setupZoom()">
 	<p style="color: green"><%= flash[:notice] %></p>
 	<div id="content">
@@ -21,9 +19,8 @@
 			<h1><%= link_to "dalli.if.ua", page_path("home") %></h1>
 		</div>
 		<ul id="menu">
-			
-			<% if controller.controller_name=="pages" && page_path=="/pages/home"%> <li class="current"><%= link_to "Головна", page_path("home") %></li>
-			<%else%> <li><%= link_to "Головна", page_path("home") %> <%end%>
+
+			<li class="<%= controller.controller_name=="pages" && page_path=="/pages/home" ? 'current' : '' %>" ><%= link_to "Головна", page_path("home") %></li>
 			
 			<% if controller.controller_name=="products"%>	<li class="current"> <%= link_to 'Продукція', products_path %></li>
 			<%else%> <li> <%= link_to 'Продукція', products_path %> <%end%>
