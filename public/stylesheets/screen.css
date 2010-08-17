@@ -14,6 +14,7 @@ h3 { font-size: 1.2em; background: #B00A0A url(../images/redbg.gif) repeat-x lef
 h4 { margin: 0 0 15px; color: #555; font-weight: normal; font-size: 1.6em; font-weight: normal; }
 p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 .line { clear: both; border-bottom: 1px solid #ddd; margin: 0 0 45px; }
+.line2 { clear: both; border-bottom: 1px solid #ddd; margin: 0 0 20px; }
 .clear { clear: both; }
 #content { width: 970px; margin: 0 auto; }
 	#top { color: #666666; padding: 6px 20px 0; font-size: .84em; text-align: right; }
@@ -50,8 +51,8 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 				
 		
 		.forth { float: left; width: 200px; margin: 0 40px 0 0;clear:left; }
-		.forth2 { float: left; width: 450px; margin: 0 40px 20 0; }				
-		.forth3 { float: left; width: 200px; margin: 0 40px 20px 40px; }				
+		.forth2 { float: left; width: 450px; margin: 0 40px 20 0; padding: 50px 0 0 0;}				
+		.forth3 { float: left; width: 200px; margin: 0 40px 20px 40px; padding: 50px 0 0 0 }				
 		
 		.forthm { float: left;  margin: 0 40px 0 0; clear:left; }	
 		

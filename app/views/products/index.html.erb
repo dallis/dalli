@@ -23,7 +23,7 @@
     </div>
 
 <div class="forth2">
-    <%=h product.shortd %>
+    <h1> <%=h product.shortd %> </h1>
     	<br />
     	<%= link_to 'Показати детальніше', product %>
   
@@ -37,10 +37,11 @@
   
   </div>
   
-<div class="forth3">  
-    <h1><%=h product.price %></h1>
+<div class="forth3">
+	<h2>Ціна за 1 одиницю (грн): </h2>
+    <h3><%=h product.price %></h3>
 </div>    
 
-<div class="line"></div>
+<div class="line2"></div>
 <% end %>
 
