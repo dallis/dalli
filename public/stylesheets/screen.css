@@ -58,3 +58,5 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 		
 		
 	#footer { clear: both; font-size: .84em; border-top: 1px solid #ddd; padding: 20px 0 0; }
+
+.left_align { text-align: right; }

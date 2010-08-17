@@ -1,48 +1,43 @@
-
 <div class="line"></div>
 
 <% if logged_in?  %>    
-<%= link_to 'Додати новий продукт', new_product_path %> | 
-<%end %>
+  <%= link_to 'Додати новий продукт', new_product_path %> | 
+<% end %>
 <% if logged_in?  %>
-<%= link_to 'Вийти', logout_path %>   <%end %>  
+  <%= link_to 'Вийти', logout_path %>   
+<% end %>
 <p>
 
 <h1>Продукція</h1>
 <p>
 
 <% @products.each do |product| %>
-
-<h3><strong><%=h product.title %></strong></h3>
-<div class="forth">
-<%=link_to image_tag (product.photo.url(:small)), product.photo.url %>
-    </div>
-
-<div class="forth2">
-    <h1> <%=h product.shortd %> </h1>
-    	<br />
-    	<%= link_to 'Показати детальніше', product %>
-  
-  <% if logged_in?  %>
-     | <%= link_to 'Редагувати', edit_product_path(product) %> | 
-  <%end %>
-  
-  <% if logged_in?  %>    
-       <%= link_to 'Видалити', product, :confirm => 'Ви впевнені, що хочете видалити цей продукт?', :method => :delete %>
-  <%end %>
-  
+  <h3>
+    <strong><%=h product.title %>
+  </strong>
+  </h3>
+  <div class="forth">
+    <%=link_to image_tag (product.photo.url(:small)), product.photo.url %>
   </div>
-  
-<div class="forth3">
-	<h2>Ціна за 1 шт. (грн)<sup>*</sup>: </h2>
+  <div class="forth2">
+    <h1> <%=h product.shortd %> </h1>
+  	<br />
+  	<%= link_to 'Показати детальніше', product %>
+    <% if logged_in?  %>
+       | <%= link_to 'Редагувати', edit_product_path(product) %> | 
+    <%end %>
+    <% if logged_in?  %>    
+       <%= link_to 'Видалити', product, :confirm => 'Ви впевнені, що хочете видалити цей продукт?', :method => :delete %>
+    <%end %>
+    </div>
+  <div class="forth3">
+  	<h2>Ціна за 1 шт. (грн)<sup>*</sup>: </h2>
     <h3><%=h product.price %></h3>
-</div>    
-
-<%= image_tag("standiso.gif") %>
-<%= image_tag("Dermat.gif") %>
-
-
-<div class="line2"></div>
+    <div class='clear'></div>
+    <%= image_tag("standiso.gif") %>
+    <%= image_tag("Dermat.gif") %>
+  </div>    
+  <div class="line2"></div>
 <% end %>
 
 <h2><sup>*</sup> Ціна не є остаточною і може змінюватись, для уточнення <%= link_to "зв'яжіться з нами", page_path("contacts") %> </h2>
