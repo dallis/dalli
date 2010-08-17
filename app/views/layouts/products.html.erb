@@ -36,8 +36,8 @@
 			<%else%> <li><%= link_to "Сертифікати", page_path("cert") %></li> <%end%>
 			
 			
-			<% if controller.controller_name=="pages" && page_path=="/pages/about"%> <li class="current"><%= link_to "Про нас", page_path("about") %></li>
-			<%else%> <li><%= link_to "Про нас", page_path("about") %></li> <%end%>
+			<% if controller.controller_name=="pages" && page_path=="/pages/coop"%> <li class="current"><%= link_to "Співпраця", page_path("about") %></li>
+			<%else%> <li><%= link_to "Співпраця", page_path("coop") %></li> <%end%>
 			
 			<% if controller.controller_name=="pages" && page_path=="/pages/contacts"%> <li class="current"><%= link_to "Контакти", page_path("contacts") %></li>
 			<%else%> <li><%= link_to "Контакти", page_path("contacts") %></li> <%end%>
