@@ -4,38 +4,19 @@
 
 <%= javascript_include_tag :ckeditor %>
 
-<% form_for @product, :html => {:multipart => true} do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label 'Назва продукту:' %><br />
-    <%= f.text_field :title %>
-  </p>
+<% semantic_form_for @product, :html => {:multipart => true} do |form| %>
+    <% form.inputs do %>
+    	<%= form.input :title %>
+    	<%= form.input :shortd %>
+    	<%= form.input :description, :as => :ckeditor %>
+    	<%= form.input :price %>
+    	<%= form.input :photo%>
+  		
+  	<% end %>
   
-  <p>
-    <%= f.label 'Короткий опис:' %><br />
-    <%= f.text_area :shortd %>
-  </p>
-  
-  <p>
-    <%= f.label 'Розширений опис:' %><br />
-    <%= f.cktext_area :description, :language => "uk" %>
-  </p>
-  
-  <p>
-    <%= f.label 'Ціна:' %><br />
-    <%= f.text_field :price %>
-  </p>
-  
-
-  <p>
-  	<%= f.label 'Змінити фото продукту:' %><br />
-    <%= f.file_field :photo %>
-  </p>
-
-  <p>
-    <%= f.submit 'Змінити' %>
-  </p>
+  	<% form.buttons do %>
+  		<%= form.commit_button%>
+	<% end %>
 <% end %>
 
 <%= link_to 'Показати', @product %> |
