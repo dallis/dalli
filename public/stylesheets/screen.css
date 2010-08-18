@@ -42,7 +42,7 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 	.right { float: right; width: 630px; margin: 0 0 20px; }
 		.right h3 { background: #808080; font-size: .84em; }
 		
-	.third { float: left; width: 296px; margin: 0 40px 20px 0; }
+	.third { float: left; width: 296px; margin: 0 40px 0 0; }
 		.last { margin-right: 0; }
 		
 		
