@@ -1,0 +1,2 @@
+module ProdimagsHelper
+end

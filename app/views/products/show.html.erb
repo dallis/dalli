@@ -1,9 +1,8 @@
 <div class="line"></div>
-
+<p>
 <% if logged_in?  %>
 <%= link_to 'Редагувати', edit_product_path(@product) %> |
 <%end %>
-<p>
 <%= link_to 'Назад', products_path %>
 </p>
  <h3><strong><%= link_to @product.title, @product.photo.url,:class => "phome" %> </strong> </h3>
@@ -40,4 +39,5 @@
 	</div>
 </div>
 <h2><sup>*</sup> Ціна не є остаточною і може змінюватись, для уточнення <%= link_to "зв'яжіться з нами", page_path("contacts") %> </h2>
+
 
