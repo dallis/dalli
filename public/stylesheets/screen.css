@@ -24,9 +24,9 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 			#menu li a { float: left; color: #808080; padding: 0 0 5px; margin: 0 0 0 55px; }
 			#menu li a:hover, #menu li.current a, #menu li a:focus { color: #000; border-bottom: 1px solid #ddd; }
 	#pitch {
-	padding: 30px 350px 0 0;
+	padding: 0 0;
 	border-bottom: 1px solid #ddd;
-	height: 210px;
+	height: 170px;
 	margin: 0 0 15px;
 	background-image: url(../images/dalli.gif);
 	background-repeat: no-repeat;
