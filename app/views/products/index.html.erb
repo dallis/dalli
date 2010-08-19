@@ -43,9 +43,9 @@
   	<h2>Ціна за 1 шт.:</h2>
     <h3><%=h product.price %> грн<sup>*</sup></h3>
     <div class='clear'></div>
-  <%= image_tag("standiso.gif")%>
-  <%= image_tag("Dermat.gif") %> 
-  <%= image_tag("astma_sensitive.png") %>
+<div class="prodimag2"> <%= image_tag("standiso.gif")%> </div>
+<%if product.alerg==true %> <div class="prodimag2"> <%= image_tag("Dermat.gif") %> </div> <% end %> 
+<%if product.astma==true %> <div class="prodimag2"> <%= image_tag("astma_sensitive.png") %> </div> <% end %> 
 	
   </div>    
   <div class="line"></div>
