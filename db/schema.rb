@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100818193901) do
+ActiveRecord::Schema.define(:version => 20100819111358) do
 
   create_table "assets", :force => true do |t|
     t.string   "data_file_name"
@@ -27,13 +27,6 @@ ActiveRecord::Schema.define(:version => 20100818193901) do
   add_index "assets", ["assetable_id", "assetable_type"], :name => "fk_assets"
   add_index "assets", ["user_id"], :name => "fk_user"
 
-  create_table "prodimags", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "product_id"
-  end
-
   create_table "products", :force => true do |t|
     t.string   "title"
     t.text     "description",        :limit => 2147483647
@@ -45,6 +38,13 @@ ActiveRecord::Schema.define(:version => 20100818193901) do
     t.datetime "photo_updated_at"
     t.decimal  "price",                                    :precision => 8, :scale => 2, :default => 0.0
     t.string   "shortd",             :limit => 500
+    t.boolean  "twenty"
+    t.boolean  "thirty"
+    t.boolean  "forty"
+    t.boolean  "sixty"
+    t.boolean  "ninety"
+    t.boolean  "astma"
+    t.boolean  "alerg"
   end
 
   create_table "users", :force => true do |t|

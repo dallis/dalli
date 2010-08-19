@@ -29,13 +29,24 @@
     <% if logged_in?  %>    
        <%= link_to 'Видалити', product, :confirm => 'Ви впевнені, що хочете видалити цей продукт?', :method => :delete %>
     <%end %>
+    
+<div class='clear'></div>
+  <%if product.twenty==true %> <div class="prodimag"> <%= image_tag("20.png") %> </div> <% end %> 
+  <%if product.thirty==true %> <div class="prodimag"> <%= image_tag("30.png") %> </div> <% end %> 
+  <%if product.forty==true %> <div class="prodimag"> <%= image_tag("40.png") %> </div> <% end %> 
+  <%if product.sixty==true %> <div class="prodimag"> <%= image_tag("60.png") %> </div> <% end %> 
+  <%if product.ninety==true %> <div class="prodimag"> <%= image_tag("95.png") %> </div> <% end %>  
+    
+    
     </div>
   <div class="forth3">
   	<h2>Ціна за 1 шт.:</h2>
     <h3><%=h product.price %> грн<sup>*</sup></h3>
     <div class='clear'></div>
-    <%= image_tag("standiso.gif") %>
-    <%= image_tag("Dermat.gif") %>
+  <%= image_tag("standiso.gif")%>
+  <%= image_tag("Dermat.gif") %> 
+  <%= image_tag("astma_sensitive.png") %>
+	
   </div>    
   <div class="line"></div>
 <% end %>

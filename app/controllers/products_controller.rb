@@ -6,8 +6,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.xml
   def index
-    @products = Product.all
-
+  	@products = Product.all
+	
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @products }
@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
   # GET /products/1.xml
   def show
     @product = Product.find(params[:id])
-
+		
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @product }
@@ -45,6 +45,7 @@ class ProductsController < ApplicationController
   # POST /products.xml
   def create
     @product = Product.new(params[:product])
+    @prodimag = Prodimag.new(params[:prodimag])
 
     respond_to do |format|
       if @product.save

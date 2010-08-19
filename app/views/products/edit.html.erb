@@ -6,16 +6,22 @@
 
 <% semantic_form_for @product, :html => {:multipart => true} do |form| %>
     <% form.inputs do %>
-    	<%= form.input :title %>
-    	<%= form.input :shortd %>
-    	<%= form.input :description, :as => :ckeditor %>
-    	<%= form.input :price %>
-    	<%= form.input :photo%>
-  		<%= form.input :prodimags, :as => :check_boxes%>
+    	<%= form.input :title, :label => "Назва продукту" %>
+    	<%= form.input :shortd, :label => "Короткий опис" %>
+    	<%= form.input :description, :as => :ckeditor, :label => "Опис" %>
+    	<%= form.input :price, :label => "Ціна за 1 шт,грн" %>
+    	<%= form.input :photo, :label => "Вибрати нове фото"%>
+  		<%= form.input :twenty, :label => "20" %>
+  		<%= form.input :thirty,:label => "30"%>
+  		<%= form.input :forty,:label => "40"%>
+  		<%= form.input :sixty,:label => "60"%>
+  		<%= form.input :ninety,:label => "95"%>
+  		<%= form.input :astma,:label => "для астматиків"%>
+  		<%= form.input :alerg,:label => "для алергиків" %>
   	<% end %>
   
   	<% form.buttons do %>
-  		<%= form.commit_button%>
+  		<%= form.commit_button :label => "Змінити продукт" %>
 	<% end %>
 <% end %>
 

@@ -55,7 +55,8 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 		
 		.forthm { float: left;  margin: 0 40px 0 0; clear:left; }	
 		.cert {float:left; margin: 20px 20px;}
-		
+	.prodimag {float:left; margin: 10px 0;}
+	.prodimag2 {float:left; padding: 10px 3px; margin 20 0 0 0;}	
 	#footer { clear: both; font-size: .84em; border-top: 1px solid #ddd; padding: 20px 0 0; }
 
 .left_align { text-align: right; }
