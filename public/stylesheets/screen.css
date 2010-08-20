@@ -57,6 +57,12 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 		.cert {float:left; margin: 20px 20px;}
 	.prodimag {float:left; margin: 10px 0;}
 	.prodimag2 {float:left; padding: 10px 3px; margin 20 0 0 0;}	
+
+#leftimage img {float: left; margin: 0px 20px 10px 0px}
+#banners img {opacity:0.3; -moz-opacity:0.3; filter:alpha(opacity=40);float: left; margin: 0px 20px 10px 0px}
+#banners img:hover {opacity:1.0; -moz-opacity:1.0; filter:alpha(opacity=100);}
+	
+	
 	#footer { clear: both; font-size: .84em; border-top: 1px solid #ddd; padding: 20px 0 0; }
 
 .left_align { text-align: right; }
