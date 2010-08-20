@@ -38,6 +38,9 @@
 			<% if controller.controller_name=="pages" && page_path=="/pages/coop"%> <li class="current"><%= link_to "Співпраця", page_path("coop") %></li>
 			<%else%> <li><%= link_to "Співпраця", page_path("coop") %></li> <%end%>
 			
+			<% if controller.controller_name=="pages" && page_path=="/pages/dost"%> <li class="current"><%= link_to "Доставка", page_path("dost") %></li>
+			<%else%> <li><%= link_to "Доставка", page_path("dost") %></li> <%end%>
+			
 			<% if controller.controller_name=="pages" && page_path=="/pages/contacts"%> <li class="current"><%= link_to "Контакти", page_path("contacts") %></li>
 			<%else%> <li><%= link_to "Контакти", page_path("contacts") %></li> <%end%>
 		</ul>
