@@ -6,8 +6,9 @@
 <%= link_to 'Назад', products_path %>
 </p>
  <h3><strong><%= link_to @product.title, @product.photo.url,:class => "phome" %> </strong> </h3>
-
-
+ <div class='clear'></div>
+ <h5><%= @product.ukrtitle %></h5>
+ 
 <div class="forth">
 <%= link_to image_tag(@product.photo.url(:small)), @product.photo.url %>
 </div>

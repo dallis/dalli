@@ -7,6 +7,7 @@
 <% semantic_form_for @product, :html => {:multipart => true} do |form| %>
     <% form.inputs do %>
     	<%= form.input :title, :label => "Введіть назву продукту" %>
+    	<%= form.input :ukrtitle, :label => "Введіть назву продукту по українськи" %>
     	<%= form.input :shortd, :label => "Введіть короткий опис"%>
     	<%= form.input :description, :as => :ckeditor, :label => "Розширений опис" %>
     	<%= form.input :price, :label => "Ціна за 1 шт,грн" %>

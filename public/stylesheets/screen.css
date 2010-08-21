@@ -10,8 +10,9 @@ a.phome:visited{color : #FFF;}
 h1 { font-size: 1.4em; font-weight: normal; }
 	h1 a { color: #fff; font-size: 0.84em; }
 h2 { font-size: 1.2em; }
-h3 { font-size: 1.2em; background: #B00A0A url(../images/redbg.gif) repeat-x left bottom; padding: 6px 7px; color: #fff; font-weight: normal; margin: 0 0 15px; float: left; }
+h3 { font-size: 1.2em; background: #B00A0A url(../images/redbg.gif) repeat-x left bottom; padding: 6px 7px; color: #fff; font-weight: normal; margin: 0 0 5px; float: left; }
 h4 { margin: 0 0 15px; color: #555; font-weight: normal; font-size: 1.6em; font-weight: normal; }
+h5 { font-size: 0.9em; margin: 0 0; padding:0 0; }
 p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 .line { clear: both; border-bottom: 1px solid #ddd; margin: 0 0 20px; }
 .clear { clear: both; }
