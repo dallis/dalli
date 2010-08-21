@@ -100,7 +100,7 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 	position:absolute;
 	z-index:1;
 	bottom:-7px;
-	left:5px;
+	left:40px;
 	border-top:7px solid #eceff3;
 	border-right:7px solid transparent;
 	_border-left:7px solid #FDEFC6; /* цвет фона. это для ие6.*/
