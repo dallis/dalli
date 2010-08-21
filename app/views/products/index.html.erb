@@ -12,9 +12,11 @@
 <p>
 
 <% @products.each do |product| %>
-  <h3> <strong><%=link_to product.title,product, :class => "phome" %> </strong> </h3>
-  <div class='clear'></div>
-  <h5><%= product.ukrtitle %></h5>
+  
+	<div class="title"> 
+		<h3> <strong><%=link_to product.title,product, :class => "phome" %> </strong> </h3>
+		<em><%= product.ukrtitle %><i></i></em>
+	</div>
   <div class="forth">
     <%=link_to image_tag (product.photo.url(:small)), product %>
   </div>

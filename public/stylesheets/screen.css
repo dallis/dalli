@@ -1,4 +1,3 @@
-
 *{margin:0;padding:0}:focus,:active {outline:0}img{border: 0}
 body { font: .8em Arial, Tahoma, Verdana; background: #fff url(../images/bg.gif) repeat-x; color: #777; }
 a { text-decoration: none; color: #B20F0F; }
@@ -12,7 +11,7 @@ h1 { font-size: 1.4em; font-weight: normal; }
 h2 { font-size: 1.2em; }
 h3 { font-size: 1.2em; background: #B00A0A url(../images/redbg.gif) repeat-x left bottom; padding: 6px 7px; color: #fff; font-weight: normal; margin: 0 0 5px; float: left; }
 h4 { margin: 0 0 15px; color: #555; font-weight: normal; font-size: 1.6em; font-weight: normal; }
-h5 { font-size: 0.9em; margin: 0 0; padding:0 0; }
+h5 { font-size: 0.9em; margin: 0 0 0 45px; padding:0 0; }
 p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 .line { clear: both; border-bottom: 1px solid #ddd; margin: 0 0 20px; }
 .clear { clear: both; }
@@ -52,7 +51,7 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 		
 		.forth { float: left; width: 200px; margin: 0 40px 0 0;clear:left; }
 		.forth2 { float: left; width: 450px; margin: 0 40px 20 0; padding: 30px 0 0 0;}				
-		.forth3 { float: left; width: 200px; margin: 0 40px 20px 40px; padding: 30px 0 0 0 }				
+		.forth3 { float: left; width: 200px; margin: 0 40px 20px 40px; padding: 0 0 0 0 }				
 		
 		.forthm { float: left;  margin: 0 40px 0 0; clear:left; }	
 		.cert {float:left; margin: 20px 20px;}
@@ -67,3 +66,47 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 	#footer { clear: both; font-size: .84em; border-top: 1px solid #ddd; padding: 20px 0 0; }
 
 .left_align { text-align: right; }
+
+
+
+
+
+.title{
+	position:relative;
+	z-index:1;
+	zoom:1;
+	color:#06F;
+}
+.title em{display:none;}
+.title:hover em{
+	display:block;
+	position:absolute;
+	z-index:1;
+ 	background-color:#eceff3;
+ 	-webkit-border-radius:5px; /* красивости в виде скругленных углов */
+ 	-moz-border-radius:5px;
+ 	border-radius:5px;
+	line-height:normal;
+	color:#1e2b48;
+	text-decoration:none;
+	padding:3px 5px;
+	bottom:4px;
+	left:0;
+	-webkit-box-shadow:0 0 5px #000; /* красивости в виде тени */
+	-moz-box-shadow:0 0 5px #000;
+	box-shadow:0 0 5px #000;
+}
+.title:hover em i{
+	position:absolute;
+	z-index:1;
+	bottom:-7px;
+	left:5px;
+	border-top:7px solid #eceff3;
+	border-right:7px solid transparent;
+	_border-left:7px solid #FDEFC6; /* цвет фона. это для ие6.*/
+	display:block;
+	height:0;
+	overflow:hidden;
+}
+
+
