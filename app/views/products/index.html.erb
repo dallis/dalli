@@ -18,7 +18,7 @@
 		<em><%= product.ukrtitle %><i></i></em>
 	</div>
   <div class="forth">
-    <%=link_to image_tag (product.photo.url(:small)), product %>
+    <%= link_to (image_tag(product.photo.url(:small))),product %>
   </div>
   <div class="forth2">
     <h1> <%=h product.shortd %> </h1>
