@@ -21,6 +21,7 @@
 	<p style="color: green"><%= flash[:notice] %></p>
 	<div id="content">
 		<p id="top">ТОВ "Зета ІФ" - офіційний імпортер продукції DALLI в Україні (095) 341-96-23</p>
+		<div id="top2"><%= mail_to "dalli@dalli.if.ua", "dalli@dalli.if.ua"%> </div>
 		<div id="logo">
 			<h1><%= link_to "dalli.if.ua", page_path("home") %></h1>
 		</div>
@@ -46,7 +47,8 @@
 		</ul>
     <%= yield %>
 		<div id="footer">
-			<p>&copy; Copyright 2010 dalli.if.ua</p>
+			&copy; Copyright 2010
+			<%= mail_to "admin@dalli.if.ua", "dalli.if.ua", :encode => "javascript"%>
 		</div>	
 	</div>
 </body>
