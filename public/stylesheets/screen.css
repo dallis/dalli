@@ -17,7 +17,6 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 .clear { clear: both; }
 #content { width: 970px; margin: 0 auto; }
 	#top { color: #666666; padding: 6px 20px 0; font-size: .84em; text-align: right; margin-bottom: 0px;}
-	#top2 { color: #666666; padding: 0px 20px 0; margin: 0 0; font-size: .84em; text-align: right; }
 	#logo { float: left; background: url(../images/redbg.gif) repeat-x; padding: 100px 25px 15px; margin: -46px 0 20px; }
 		#logo h1 { text-shadow: 1px 1px 1px #7E0E0E; }
 	#menu { float: right; margin: 63px 20px 0; }
