@@ -46,7 +46,7 @@
     <div class='clear'></div>
 <div class="prodimag2"> <%= image_tag("standiso.gif")%> </div>
 <%if product.alerg==true %> <div class="prodimag2"> <%= image_tag("Dermat.gif") %> </div> <% end %> 
-<%if product.astma==true %> <div class="prodimag2"> <%= image_tag("astma_sensitive.png") %> </div> <% end %> 
+<%if product.astma==true %> <div class="prodimag2"> <%= link_to (image_tag("astma_sensitive.png")), "http://www.daab.de/" %> </div> <% end %> 
 	
   </div>    
   <div class="line"></div>
