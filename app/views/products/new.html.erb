@@ -12,14 +12,23 @@
     	<%= form.input :description, :as => :ckeditor, :label => "Розширений опис" %>
     	<%= form.input :price, :label => "Ціна за 1 шт,грн" %>
     	<%= form.input :photo, :label => "Додати фото"%>
-    	<%= form.input :twenty, :label => "20" %>
-  		<%= form.input :thirty,:label => "30"%>
-  		<%= form.input :forty,:label => "40"%>
-  		<%= form.input :sixty,:label => "60"%>
-  		<%= form.input :ninety,:label => "95"%>
-  		<%= form.input :astma,:label => "для астматиків"%>
+    	<h1>Температурний режим:</h1>
+    	<%= form.input :twenty, :label => "20" %> 
+    	<%= form.input :thirty,:label => "30"%> 
+    	<%= form.input :forty,:label => "40"%> 
+    	<%= form.input :sixty,:label => "60"%>	
+    	<%= form.input :ninety,:label => "95"%>
+  		<%= form.input :astma,:label => "для астматиків"%>	
   		<%= form.input :alerg,:label => "для алергиків" %>
- 	  	 		  		  		
+ 	  	<h1>Кількість завантажень пральної машинки:</h1>
+ 	  	<%= form.input :eighteenzav, :label => "18 завантажень" %> 
+    	<%= form.input :twentyzav,:label => "20 завантажень"%> 
+    	<%= form.input :fortyzav,:label => "45 завантажень"%> 
+    	<%= form.input :seventyzav,:label => "75 завантажень"%>	
+    	<%= form.input :hundredzav,:label => "100 завантажень"%>
+  		
+  		
+  		 		  		  		
   	<% end %>
  
   	<% form.buttons do %>
