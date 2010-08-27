@@ -7,7 +7,8 @@ CKEDITOR.editorConfig = function( config )
 {
   config.PreserveSessionOnFileBrowser = true;
   // Define changes to default configuration here. For example:
-  config.language = 'ru';
+  config.defaultLanguage = 'uk';
+  config.language = 'uk';
   //config.uiColor = '#AADC6E';
   config.skin = 'office2003';
 
@@ -34,7 +35,7 @@ CKEDITOR.editorConfig = function( config )
         ['Cut','Copy','Paste','PasteText','PasteFromWord',],
         ['Maximize','-','About'],
         ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
-        ['Styles','Format'],
+        ['Styles','Format','Font','FontSize'],
         ['Bold','Italic','Underline','Strike','-','Subscript','Superscript', 'TextColor'],
         ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
