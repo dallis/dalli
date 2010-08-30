@@ -29,8 +29,9 @@
 	<h2>Ціна за 1 шт.:</h2>
   <h3><%=h @product.price %> грн<sup>*</sup></h3>
 	 <div class='clear'></div>
-<div class="prodimag2"> <%= image_tag("standiso.gif")%> </div>
-<%if @product.alerg==true %> <div class="prodimag2"> <%= image_tag("Dermat.gif") %> </div> <% end %> 
+<div class="prodimag2"> <%= link_to (image_tag("standiso.gif")), "http://dqs.com.ua/" %> </div>
+<div class="prodimag2"> <%= link_to (image_tag("cleaning.png")), "http://www.sustainable-cleaning.com/" %> </div>
+<%if @product.alerg==true %> <div class="prodimag2"> <%= link_to (image_tag("Dermat.gif")), "http://www.proderm.de/" %> </div> <% end %> 
 <%if @product.astma==true %> <div class="prodimag2"> <%= link_to (image_tag("astma_sensitive.png")), "http://www.daab.de/" %> </div> <% end %> 
 	
 <div class='clear'></div>
