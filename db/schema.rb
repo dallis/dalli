@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100830114324) do
+ActiveRecord::Schema.define(:version => 20100906131947) do
 
   create_table "assets", :force => true do |t|
     t.string   "data_file_name"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20100830114324) do
     t.boolean  "seventyzav"
     t.boolean  "hundredzav"
     t.boolean  "sklad"
+    t.boolean  "typ"
   end
 
   create_table "users", :force => true do |t|

@@ -4,7 +4,7 @@ before_filter :login_required, :except => [:index,:show]
   # GET /products
   # GET /products.xml
   def index
-  	@products = Product.all
+  	@products = Product.search(params[:search], params[:page])
 	
     respond_to do |format|
       format.html # index.html.erb

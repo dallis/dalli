@@ -9,8 +9,8 @@
 <p>
 
 <h1>Продукція</h1>
+<%= will_paginate @products, :previous_label => "Попередня", :next_label => "Наступна" %>
 <p>
-
 <% @products.each do |product| %>
   
 	<div class="title"> 
@@ -60,5 +60,7 @@
   </div>    
   <div class="line"></div>
 <% end %>
+
+<%= will_paginate @products, :previous_label => "Попередня", :next_label => "Наступна" %>
 
 <h2><sup>*</sup> Ціна не є остаточною і може змінюватись, для уточнення ціни та умов  <%= link_to "доставки", page_path("dost") %> продукції <%= link_to "зв'яжіться з нами", page_path("contacts") %> </h2>
