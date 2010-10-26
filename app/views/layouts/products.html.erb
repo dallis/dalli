@@ -4,12 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="Robots" content="all" />
 	<meta name="author" content="ms" />
-	<meta name="dalli.if.ua - офіційний партнер продукції dalli в Україні" content="Description" />
-	<meta name="keywords" content="dalli,даллі,далли, пральний порошок,пральний порошок dalli,пральний порошок даллі,пральний порошок далли,стиральный порошок,стиральный порошок dalli,стиральный порошок далли,стиральный порошок даллі,dalli Україна, далли Украина, даллі Україна,купити порошок даллі, купить порошок dalli,dalli.if.ua, даллі івано-франківськ" />
+	<meta name="dalli.com.ua - офіційний партнер продукції dalli в Україні" content="Description" />
+	<meta name="keywords" content="dalli,dalli.com.ua,даллі,далли, пральний порошок,пральний порошок dalli,пральний порошок даллі,пральний порошок далли,стиральный порошок,стиральный порошок dalli,стиральный порошок далли,стиральный порошок даллі,dalli Україна, далли Украина, даллі Україна,купити порошок даллі, купить порошок dalli,dalli.if.ua, даллі івано-франківськ" />
   <%= stylesheet_link_tag "screen", 'blitzer/jquery-ui-1.8.4.custom', :media=> "all" %>
   <%= formtastic_stylesheet_link_tag %>
   <%= javascript_include_tag 'jquery-1.4.2.min', 'jquery-ui-1.8.4.custom.min', 'js-global/FancyZoom.js', 'js-global/FancyZoomHTML.js', :cache => true %>
-	<title>dalli.if.ua - офіційний імпортер продукції Dalli в Україні</title>
+	<title>dalli.com.ua - офіційний імпортер продукції Dalli в Україні</title>
   <script type="text/javascript">
   	$(function() {
   	  setupZoom();
@@ -39,7 +39,7 @@
 	<div id="content">
 		<p id="top">ТОВ "Зета ІФ" - офіційний імпортер продукції DALLI в Україні (095) 341-96-23<br> <%= mail_to "dalli@dalli.if.ua", "dalli@dalli.if.ua"%> </p>
 		<div id="logo">
-			<h1><%= link_to "dalli.if.ua", page_path("home") %></h1>
+			<h1><%= link_to "dalli.com.ua", page_path("home") %></h1>
 		</div>
 		<ul id="menu">
 			<li class="<%= controller.controller_name=="pages" && page_path=="/pages/home" ? 'current' : '' %>" ><%= link_to "Головна", page_path("home") %></li>
@@ -64,7 +64,7 @@
     <%= yield %>
 		<div id="footer">
 			&copy; Copyright 2010
-			<%= mail_to "admin@dalli.if.ua", "dalli.if.ua", :encode => "javascript"%>
+			<%= mail_to "admin@dalli.if.ua", "dalli.com.ua", :encode => "javascript"%>
 		</div>	
 	</div>
 </body>

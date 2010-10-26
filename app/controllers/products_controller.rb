@@ -4,8 +4,11 @@ before_filter :login_required, :except => [:index,:show]
   # GET /products
   # GET /products.xml
   def index
-  	@products = Product.search(params[:search], params[:page])
+  	#@products = Product.search(params[:search], params[:page])
 	
+  	@search = Product.search(params[:search])
+	@products = @search.paginate(:page => params[:page],:per_page => 5)
+  	
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @products }

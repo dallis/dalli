@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100906131947) do
+ActiveRecord::Schema.define(:version => 20101025083932) do
 
   create_table "assets", :force => true do |t|
     t.string   "data_file_name"
@@ -26,6 +26,12 @@ ActiveRecord::Schema.define(:version => 20100906131947) do
   add_index "assets", ["assetable_id", "assetable_type", "type"], :name => "ndx_type_assetable"
   add_index "assets", ["assetable_id", "assetable_type"], :name => "fk_assets"
   add_index "assets", ["user_id"], :name => "fk_user"
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "products", :force => true do |t|
     t.string   "title"
@@ -53,6 +59,8 @@ ActiveRecord::Schema.define(:version => 20100906131947) do
     t.boolean  "hundredzav"
     t.boolean  "sklad"
     t.boolean  "typ"
+    t.integer  "category_id"
+    t.string   "artukyl"
   end
 
   create_table "users", :force => true do |t|

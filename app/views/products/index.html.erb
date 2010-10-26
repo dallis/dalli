@@ -9,20 +9,42 @@
 <p>
 
 <h1>Продукція</h1>
+
+<p>
+  Сортувати по:
+  <%= order @search, :by => :title, :as => "Назві" %> |
+  <%= order @search, :by => :price, :as => "Ціні" %>
+</p>
+
+<% form_for @search do |f| %>
+  <p>
+    <%= f.collection_select :category_id_equals, Category.all, :id, :name, :prompt => "-Виберіть вид продукції-" %>
+    <%= f.submit " OK " %>
+    <%= f.label :artukyl_like, "Артикул:" %> <%= f.text_field :artukyl_like,:size => 8 %><%= f.submit " пошук " %>
+  </p>
+<% end %>
+
+
+
+
 <%= will_paginate @products, :previous_label => "Попередня", :next_label => "Наступна" %>
 <p>
 <% @products.each do |product| %>
-  
-	<div class="title"> 
+  	<div class="title"> 
 		<h3> <strong><%=link_to product.title,product, :class => "phome" %> </strong> </h3>
 		<em><%= product.ukrtitle %><i></i></em>
 	</div>
+	<div class='clear'></div>
+	<div class="forth4"> <i>  <%= product.category.name %> </i> </div>
   <div class="forth">
     <%= link_to (image_tag(product.photo.url(:small))),product %>
+    </br>
+    <h5><i>артикул: </i><%= product.artukyl %> </h5>
+    <p>
   </div>
   <div class="forth2">
     <h1> <%=h product.shortd %> </h1>
-  	<br />
+    <br />
   	<%= link_to 'Показати детальніше', product %>
     <% if logged_in?  %>
        | <%= link_to 'Редагувати', edit_product_path(product) %> | 
