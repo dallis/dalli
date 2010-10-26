@@ -6,9 +6,9 @@
 	<meta name="author" content="ms" />
 	<meta name="dalli.com.ua - офіційний партнер продукції dalli в Україні" content="Description" />
 	<meta name="keywords" content="dalli,dalli.com.ua,даллі,далли, пральний порошок,пральний порошок dalli,пральний порошок даллі,пральний порошок далли,стиральный порошок,стиральный порошок dalli,стиральный порошок далли,стиральный порошок даллі,dalli Україна, далли Украина, даллі Україна,купити порошок даллі, купить порошок dalli,dalli.if.ua, даллі івано-франківськ" />
-  <%= stylesheet_link_tag "screen", 'blitzer/jquery-ui-1.8.4.custom', :media=> "all" %>
+  <%= stylesheet_link_tag "screen", 'blitzer/jquery-ui-1.8.4.custom','uniform.default', :media=> "all" %>
   <%= formtastic_stylesheet_link_tag %>
-  <%= javascript_include_tag 'jquery-1.4.2.min', 'jquery-ui-1.8.4.custom.min', 'js-global/FancyZoom.js', 'js-global/FancyZoomHTML.js', :cache => true %>
+  <%= javascript_include_tag 'jquery-1.4.2.min', 'jquery-ui-1.8.4.custom.min', 'js-global/FancyZoom.js', 'js-global/FancyZoomHTML.js','jquery.uniform.js', :cache => true %>
 	<title>dalli.com.ua - офіційний імпортер продукції Dalli в Україні</title>
   <script type="text/javascript">
   	$(function() {
@@ -32,7 +32,13 @@
 
 </script>
   	
-  	
+<script type="text/javascript" charset="utf-8">
+      $(function(){
+        $("input, textarea, select, button").uniform();
+      });
+</script>  	
+
+
 </head>
 <body>
 	<p style="color: green"><%= flash[:notice] %></p>
