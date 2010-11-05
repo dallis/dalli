@@ -59,7 +59,11 @@
 		<p><%= @product.description %></p>
 		</div>
 	<div id="Normy_vutrat">
-		<%if @product.typ==true %> <%= image_tag("normu1.png") %> <%else%> <%= image_tag("normu.png") %> <% end %>
+		<%if @product.category.id==2 %> <%= image_tag("ridk.jpg") %>
+		<%elsif @product.category.id==1 && (@product.eighteenzav==true || @product.twentyzav==true)  %> <%= image_tag("tv18_20.jpg") %> 
+		<%elsif @product.category.id==1 && (@product.fortyzav==true || @product.seventyzav==true)  %> <%= image_tag("tv45_75.jpg") %>
+		<%elsif @product.category.id==1 && @product.hundredzav==true %> <%= image_tag("tv100.jpg") %> 	
+		<% end %>
 	</div>
 </div>
 <h2><sup>*</sup> Ціна не є остаточною і може змінюватись, для уточнення ціни та умов  <%= link_to "доставки", page_path("dost") %> продукції <%= link_to "зв'яжіться з нами", page_path("contacts") %> </h2>
