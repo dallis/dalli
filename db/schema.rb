@@ -35,15 +35,15 @@ ActiveRecord::Schema.define(:version => 20101025083932) do
 
   create_table "products", :force => true do |t|
     t.string   "title"
-    t.text     "description",        :limit => 2147483647
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
-    t.decimal  "price",                                    :precision => 8, :scale => 2, :default => 0.0
-    t.string   "shortd",             :limit => 500
+    t.decimal  "price",              :precision => 8, :scale => 2, :default => 0.0
+    t.text     "shortd"
     t.boolean  "twenty"
     t.boolean  "thirty"
     t.boolean  "forty"
