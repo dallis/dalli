@@ -18,8 +18,7 @@
 
 <% form_for @search do |f| %>
   <p>
-    <%= f.collection_select :category_id_equals, Category.all, :id, :name, :prompt => "-Виберіть вид продукції-" %>
-    <%= f.submit " OK " %>
+    <%= f.collection_select(:category_id_equals, Category.all, :id, :name, {:prompt => "-Виберіть вид продукції-"},{:onchange => 'submit()'}) %>
     <%= f.label :artukyl_like, "Артикул:" %> <%= f.text_field :artukyl_like,:size => 8 %><%= f.submit " пошук " %>
   </p>
 <% end %>
