@@ -20,6 +20,7 @@ GEM
       activesupport
       builder
     i18n (0.5.0)
+    kgio (2.3.3)
     mysql (2.8.1)
     paperclip (2.3.11)
       activerecord (>= 2.3.0)
@@ -36,6 +37,9 @@ GEM
     searchlogic (2.5.5)
       activerecord (~> 2.3.11)
       activerecord (~> 2.3.11)
+    unicorn (3.5.0)
+      kgio (~> 2.3)
+      rack
 
 PLATFORMS
   ruby
@@ -47,3 +51,4 @@ DEPENDENCIES
   paperclip
   rails (~> 2.3.5)
   searchlogic
+  unicorn
