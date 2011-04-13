@@ -49,6 +49,6 @@ DEPENDENCIES
   hoptoad_notifier
   mysql
   paperclip
-  rails (~> 2.3.5)
+  rails (= 2.3.11)
   searchlogic
   unicorn
