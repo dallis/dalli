@@ -34,9 +34,8 @@ GEM
       activesupport (= 2.3.11)
       rake (>= 0.8.3)
     rake (0.8.7)
-    searchlogic (2.5.5)
-      activerecord (~> 2.3.11)
-      activerecord (~> 2.3.11)
+    searchlogic (2.4.27)
+      activerecord (>= 2.0.0)
     unicorn (3.5.0)
       kgio (~> 2.3)
       rack
@@ -50,5 +49,5 @@ DEPENDENCIES
   mysql
   paperclip
   rails (= 2.3.11)
-  searchlogic
+  searchlogic (= 2.4.27)
   unicorn

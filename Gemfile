@@ -6,5 +6,5 @@ gem 'unicorn'
 gem 'mysql'
 gem 'paperclip'
 gem 'formtastic'
-gem "searchlogic"
+gem "searchlogic", "2.4.27"
 gem 'hoptoad_notifier'
