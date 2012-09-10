@@ -5,6 +5,10 @@ a { text-decoration: none; color: #B20F0F; }
 a.phome:link{color : #FFF;}
 a.phome:visited{color : #FFF;}
 
+.ui-tabs .ui-tabs-nav {
+	min-width: 203px;
+}
+
 
 h1 { font-size: 1.4em; font-weight: normal; }
 	h1 a { color: #fff; font-size: 0.84em; }
